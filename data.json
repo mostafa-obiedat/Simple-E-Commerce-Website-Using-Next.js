@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 29.99,
+      "image": "https://fakestoreapi.com/img/1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 19.99,
+      "image": "https://fakestoreapi.com/img/2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 49.99,
+      "image": "https://fakestoreapi.com/img/3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Product 4",
+      "price": 99.99,
+      "image": "https://fakestoreapi.com/img/4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Product 5",
+      "price": 39.99,
+      "image": "https://fakestoreapi.com/img/5.jpg"
+    }
+  ]
+  
