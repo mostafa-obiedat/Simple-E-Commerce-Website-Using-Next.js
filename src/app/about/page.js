@@ -1,59 +1,69 @@
 // app/about/page.js
 import Image from "next/image";
-import Head from "next/head";
 
 export default function AboutPage() {
   return (
-    <div className=" min-h-screen">
-      {/* SEO optimizations */}
-      <Head>
-        <title>About Us - My Website</title>
-        <meta
-          name="description"
-          content="Learn more about our team and mission."
-        />
-        <meta name="keywords" content="about us, team, mission, website" />
-        <meta name="author" content="Your Name or Company" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="p-8 lg:p-12">
+            <h1 className="text-5xl font-bold text-center text-blue-800 mb-12">
+              About Our Company
+            </h1>
 
-      {/* Content of About Us page */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-bold text-center text-yellow-300 mb-8">
-          About Us
-        </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Image section */}
+              <div className="flex justify-center items-center">
+                <div className="relative w-full max-w-md">
+                  <Image
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Color_icon_yellow.svg/420px-Color_icon_yellow.svg.png"
+                    alt="Our Team"
+                    width={500}
+                    height={500}
+                    className="rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"
+                  />
+                </div>
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Image section */}
-          <div className="flex justify-center items-center">
-            <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Color_icon_yellow.svg/420px-Color_icon_yellow.svg.png" // ضع المسار الفعلي للصورة هنا
-              alt="Our Team"
-              width={500} // عرض الصورة
-              height={500} // ارتفاع الصورة
-              className="rounded-lg shadow-lg w-90" // إضافة بعض التنسيق للصورة
-            />
-          </div>
+              {/* Text section */}
+              <div>
+                <div className="space-y-8">
+                  <div>
+                    <h2 className="text-3xl font-semibold text-blue-600 mb-4">
+                      Our Mission
+                    </h2>
+                    <p className="text-gray-700 leading-relaxed">
+                      We are a passionate team dedicated to delivering
+                      high-quality solutions to our clients. Our mission is to
+                      provide exceptional services while maintaining a focus on
+                      customer satisfaction, innovation, and continuous
+                      improvement.
+                    </p>
+                  </div>
 
-          {/* Text section */}
-          <div>
-            <h2 className="text-2xl font-semibold text-yellow-400 mb-4">
-              Our Mission
-            </h2>
-            <p className="text-gray-300 mb-4">
-              We are a passionate team dedicated to delivering high-quality
-              solutions to our clients. Our mission is to provide exceptional
-              services while maintaining a focus on customer satisfaction,
-              innovation, and continuous improvement.
-            </p>
+                  <div>
+                    <h2 className="text-3xl font-semibold text-blue-600 mb-4">
+                      Our Team
+                    </h2>
+                    <p className="text-gray-700 leading-relaxed">
+                      Our team is made up of talented and motivated individuals
+                      with a diverse range of skills. We work collaboratively to
+                      achieve our goals and deliver outstanding results for our
+                      clients.
+                    </p>
+                  </div>
 
-            <h2 className="text-2xl font-semibold text-yellow-400 mb-4">
-              Our Team
-            </h2>
-            <p className="text-gray-300">
-              Our team is made up of talented and motivated individuals with a
-              diverse range of skills. We work collaboratively to achieve our
-              goals and deliver outstanding results for our clients.
-            </p>
+                  <div className="flex space-x-4 mt-8">
+                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+                      Contact Us
+                    </button>
+                    <button className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition duration-300">
+                      Our Services
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

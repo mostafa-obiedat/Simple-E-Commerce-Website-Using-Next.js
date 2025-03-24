@@ -20,16 +20,30 @@ export default async function ProductsPage() {
     }
 
     return (
-      <div className="flex justify-around items-center text-yellow-300 h-[90vh]">
-        {products.map((product) => (
-          <div key={product.id} className="border p-10">
-            <div>{product.title}</div>
-            <div>{product.price}</div>
-            <button className="border rounded-2xl p-2 m-2 hover:cursor-pointer hover:bg-yellow-300 hover:text-black">
-              <Link href={`/products/${product.id}`}>more details...</Link>
-            </button>
-          </div>
-        ))}
+      <div className="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white shadow-lg rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="p-6">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                  {product.title}
+                </h2>
+                <p className="text-xl text-blue-600 font-semibold mb-6">
+                  ${product.price}
+                </p>
+                <Link
+                  href={`/products/${product.id}`}
+                  className="block w-full text-center bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out"
+                >
+                  More Details
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   } catch (error) {
